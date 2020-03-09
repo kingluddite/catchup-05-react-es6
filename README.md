@@ -21,6 +21,14 @@
 
 ```
 $ git checkout master
+$ git checkout 00-var-variables
+$ git checkout 01-review-variables-start
+$ git checkout 02-activity-01-solution
+$ git checkout 03-scoping
+$ git checkout 04-constructor
+$ git checkout 05-constructor-activity-start
+$ git checkout 06-constructor-activity-solution
+$ git checkout 07-arrow-functions
 ```
 
 ## Summary
