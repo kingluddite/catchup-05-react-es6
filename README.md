@@ -121,5 +121,8 @@ let myName;
 * You will get a `ReferenceError: Cannot access 'myName' before initialization`
 
 ## Bottom line
-* let and const should be used
-* var should not be used as let and const are better tools that help our code be cleaner and have less strange old school strange JavaScript bugs
+* `let` and `const` should be used
+* `var` should not be used as `let` and `const` are better tools that help our code be cleaner and have less strange old school strange JavaScript bugs
+
+## Resources
+* https://scotch.io/tutorials/understanding-hoisting-in-javascript
