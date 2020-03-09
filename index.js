@@ -27,3 +27,6 @@ class Dog {
 
 var ralph = new Dog('Ralph', 12);
 ralph.bark();
+
+// Next branch:
+// $ 05-constructor-activity-start
