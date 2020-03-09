@@ -11,6 +11,7 @@
 
 * `$ git fetch --all`
 * `$ git pull --all`
+* `$ git branch -a` (will show you remote branches)
 
 ### Checkout branches locally
 * To focus more on the code we will just checkout a branch to work on the next lesson
