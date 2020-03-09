@@ -46,5 +46,7 @@ $ git checkout 07-arrow-functions
 * Alternative constructor functions with `class` keyword
 * Activity II
 * Arrow functions
+* Activity III
+* Template Strings
 * Resources:
     - ["this" and Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch2.md)
