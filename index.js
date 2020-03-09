@@ -65,3 +65,6 @@ if (true) {
 // global scope can only access `varOne`
 // The first local scope can only access `varOne` and `varTwo` and `varFour`
 // The second local scope can only access `varOne` and `varThree`
+
+// Next branch
+// $ git checkout 04-constructor
