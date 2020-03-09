@@ -1,96 +1,125 @@
 # Catchup #5: React ES6
-## Variable scope
-* The `scope` of a variable defines where it's accessible in your program based off of where it was created
+# Variables with var
+* We can reassign with `var` just like we can with `let`
 
-## This works as we expect
 ```
-let varOne = "Hello from the global scope";
+var firstName = 'John';
 
+firstName = 'Jill';
+console.log(firstName);
+
+```
+
+# Difference between var and const and let and why const and let should be preferred
+## var lets us recreate a variable that was already created (declared)
+
+```
+var firstName = 'John';
+
+firstName = 'Jill';
+
+var firstName = 'Tom';
+console.log(firstName);
+```
+
+* `const` or `let` wouldn't let us declare a variable already declared
+* This is a big problem with var and if we use var is could cause problems for our code
+    - const and let help prevent us from overiding a variable we already declared
+
+## Another con of `var`
+* `var` is function scoped not block scoped
+* if statements don't create a new scope when working with var
+
+```
 if (true) {
-  console.log(varOne);
-}
-// Output: Hello from the global scope
-```
-
-## This causes a problem
-```
-let varOne = "Hello from the global scope";
-
-if (true) {
-  console.log(varOne);
-  let varTwo = "Hello from the local scope";
-}
-
-console.log(varTwo);
-// ERROR - varTwo is not defined
-```
-
-## Lexical Scope
-* JavaScript using `Lexical Scoping` (aka Static Scope)
-* What does it mean?
-    - It is the idea that a variable defined in one part of your program might not be accessible everywhere else in your program
-      + (_the **context** of the variable that is defined and used comes into play_)
-* **tip** When dealing with scoping pay attention to the "code blocks"
-    - "Code blocks" are what we put inside of curly braces `{...}`
-
-## There are 2 types of scope in JavaScript
-1. global scope
-2. local scope
-
-### What is global scope?
-* `global scope` contains all of the things defined outside of all "code blocks"
-  - **note** Above code: `varOne` is a `globally scoped` variable
-
-### What is local scope?
-* local scope are things defined inside a "code block"
-* **note** Above code: `varTwo` is a local scoped variable
-
-### Important scope rule
-* In a scope you can access variables defined in that scope, or in `any parent/ancestor` scope
-* This explains why we can access `varOne` and `varTwo` from _inside_ the "code block"
-  - But we can not access `varTwo` from _outside_ the "code block"
-
-```
-let varOne = "Hello from the global scope";
-
-if (true) {
-  console.log(varOne);
-  let varTwo = "Hello from the local scope";
-  console.log(varTwo);
+  var firstName = 'Jen';
 }
 
-console.log(varTwo);
+console.log(firstName); // Jen
 ```
 
-## Fun with "scope trees"
-### Let's draw a scope tree for the following:
-```
-let varOne = "varOne";
+* Using var `if` statements are function scoped so we have access to firstName
+* But if we used `let` or `const` they are block scoped and `firstName` would not be accessible in the global scope because it is inside the block
 
+```
 if (true) {
-  console.log(varOne);
-  let varTwo = "Hello from varTwo's local scope";
-  console.log(varTwo);
-
-  if (true) {
-    let varFour = "Hello from varFour's local scope";
-  }
+  const firstName = 'Jen';
 }
 
-if (true) {
-  let varThree = "Hello from varThree's local scope";
-}
-
-console.log(varTwo);
-
-// here is the scope tree
-
-// global scope (varOne)
-//  local scope (varTwo)
-//    local scope (varFour)
-//  local scope (varThree)
+console.log(firstName); // error ---> firstName is not defined
 ```
 
-* global scope can only access `varOne`
-* The first local scope can only access `varOne` and `varTwo` and `varFour`
-* The second local scope can only access `varOne` and `varThree`
+## Block scope gives you more flexibility than function scoped
+* I can create local variables in if statements using const and let
+    - If I used var those variables would be exposed outside the if statement
+
+## var is function scoped
+```
+function test() {
+  var firstName = 'John';
+}
+
+console.log(firstName); // will give you an error that firstName is not defined because it is function scoped
+```
+
+## Other problem is accessing a variable before it is declared
+### JavaScript will implicitly set declared variables but unassigned to `undefined`
+* This is true for `var`, `let` and `const`
+
+```
+var myName;
+// const myOtherName;
+let myOtherOtherName;
+console.log(myName);
+// console.log(myOtherName);
+console.log(myOtherOtherName);
+```
+
+* Note that `const` is commented out because you will get an error if you do not assign a value to const variables
+
+## Try to access a variable before it is defined
+```
+console.log(myName);
+var myName;
+```
+
+* You will get `undefined`
+    - This is because when you declare a variable with `var` it's declaration gets "hoisted" to the top of the scope
+    - **remember** It is only the declaration of the variable that gets hoisted
+
+```
+// if we assign a value to our var variable, we'll still get undefined
+console.log(myName); // still undefined
+var myName = 'Joe';
+```
+
+* The above because of hoisting really looks like this:
+
+```
+var myName;
+console.log(myName);
+myName = 'Joe';
+```
+
+* One more weird example of var
+
+```
+firstName = 'Joe';
+console.log(firstName); // Joe
+var firstName
+```
+
+* We get `Joe` from our log because once again the var declaration gets **hoisted** to the top of the program
+
+* But if you do this:
+
+```
+console.log(myName);
+let myName;
+```
+
+* You will get a `ReferenceError: Cannot access 'myName' before initialization`
+
+## Bottom line
+* let and const should be used
+* var should not be used as let and const are better tools that help our code be cleaner and have less strange old school strange JavaScript bugs
