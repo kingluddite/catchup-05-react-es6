@@ -1,12 +1,12 @@
-var createState = function() {
-  var state = {
+const createState = function() {
+  const state = {
     name: 'Bella',
     age: 45,
     friends: ['Jeremy', 'Edith', 'Ellison', 'Savannah']
   };
 
-  var setState = function(newState) {
-    for (var key in state) {
+  const setState = function(newState) {
+    for (let key in state) {
       if (newState.hasOwnProperty(key)) {
         state[key] = newState[x];
       }
