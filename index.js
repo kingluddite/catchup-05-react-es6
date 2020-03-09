@@ -1,21 +1,39 @@
-// Using the class syntax creates a constructor function for Student that assigns a name, mathGrade, scienceGrade, englishGrade, and studentId to each student.
+// Example 1
+// We've seen a few ways to define functions:
+// slightly different but largely function similarly
 
-// Include a method that returns the GPA (the sum of the 3 grades divided by 3). (10 minutes)
-
-// Solution
-class Student {
-  constructor(name, id, scienceGrade, englishGrade, mathGrade) {
-    this.name = name;
-    this.id = id;
-    this.scienceGrade = scienceGrade;
-    this.mathGrade = mathGrade;
-    this.englishGrade = englishGrade;
-  }
-
-  getGPA() {
-    return (this.scienceGrade + this.mathGrade + this.englishGrade) / 3;
-  }
+function foo() {
+  console.log('foo');
 }
 
-var ralph = new Student('Ralph', 1200, 3.0, 4.0, 3.2);
-console.log(ralph.getGPA());
+var bar = function() {
+  console.log('bar');
+};
+
+const baz = function() {
+  console.log('baz');
+};
+
+// Example 2
+
+// Now we're going to learn a short-hand that has one glaring and very important difference. This is called an arrow function.
+
+// Let's convert this add function:
+
+// Start code
+// const add = function(num1, num2) {
+//   return num1 + num2;
+// };
+
+// First we replace the function keyword with an arrow:
+
+// const add = (num1, num2) => {
+//   return num1 + num2;
+// };
+
+// Example 3 - Refactor even more
+// If our function just has one line of logic that we want to return we can eliminate the return keyword and curly braces!
+// const add = (num1, num2) => num1 + num2;
+
+// Next
+// $ git checkout 08-arrow-func-activity-start
