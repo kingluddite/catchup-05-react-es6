@@ -43,5 +43,5 @@ let tipThree = getTip(100, 0.15);
 // A 15 percent tip on a total value of $100 would be $ 115.00
 ```
 
-// Review what was covered at a high level
+// Review slides - what was covered at a high level
 // Slack survey feedback link - https://forms.gle/h24r1eNacqRRQ68y9
