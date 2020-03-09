@@ -21,6 +21,8 @@
 
 ```
 $ git checkout master
+```
+
 ## Summary
 * `var`
     - function-scoped/globally-scoped
