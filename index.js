@@ -71,3 +71,6 @@ obj.greet(); // Hi! I'm Sam
 // Link to dive deeper into `this` keyword ()
 
 // https://github.com/coding-boot-camp/live-online-web-async-classroom/blob/master/catch-up-sessions/05-catch-up-react-es6.md
+
+// Next branch
+// $ git checkout 09-template-strings
