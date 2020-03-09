@@ -3,7 +3,7 @@
 ### Clone to your computer
 * **note** The `$` below means "Type this in the Terminal". When writing the following Terminal commands, ignore the `$` and type the rest. You will see people represent the Terminal on sites like Stackoverflow with the `$`. Repeat. You don't need to type the `$`. (Don't confuse this `$` with the `$` from jQuery)
 
-`$ git clone https://githttps://github.com/kingluddite/react-es6-catchup.git`
+`$ git clone https://github.com/kingluddite/react-es6-catchup.git`
 
 ### Pull down all branches
 * Each of the lessons will be contained inside their own branches. You need to pull down these remote branches to your local machine
