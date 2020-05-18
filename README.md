@@ -46,7 +46,7 @@ console.log(varTwo);
 * **note** Above code: `varTwo` is a local scoped variable
 
 ### Important scope rule
-* In a scope you can access variables defined in that scope, or in `any parent/ancestor` scope
+* In a `scope` you can access variables defined in that scope, or in `any parent/ancestor` scope
 * This explains why we can access `varOne` and `varTwo` from _inside_ the "code block"
   - But we can not access `varTwo` from _outside_ the "code block"
 
