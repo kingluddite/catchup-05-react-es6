@@ -33,6 +33,10 @@ $ git checkout 04-constructor
 $ git checkout 05-constructor-activity-start
 $ git checkout 06-constructor-activity-solution
 $ git checkout 07-arrow-functions
+$ git checkout 08-arrow-func-activity-start
+$ git checkout 08-arrow-func-activity-solution
+$ git checkout 09-template-strings
+$ git checkotu 10-es6-functions
 ```
 
 ## Summary
@@ -51,5 +55,6 @@ $ git checkout 07-arrow-functions
 * Arrow functions
 * Activity III
 * Template Strings
+* ES6 functions (bonus if we have time)
 * Resources:
     - ["this" and Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch2.md)
