@@ -1,4 +1,7 @@
 # Catchup #5: React ES6
+## Slideshow
+* [Here is the link](https://catchup-05-react-es6.netlify.app/) to our slideshow for today's catchup
+
 ## Instructions
 ### Clone to your computer
 * **note** The `$` below means "Type this in the Terminal". When writing the following Terminal commands, ignore the `$` and type the rest. You will see people represent the Terminal on sites like Stackoverflow with the `$`. Repeat. You don't need to type the `$`. (Don't confuse this `$` with the `$` from jQuery)
