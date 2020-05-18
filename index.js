@@ -2,5 +2,5 @@
 
 // Include a method that returns the GPA (the sum of the 3 grades divided by 3). (10 minutes)
 
-## Solution
+// Solution
 `$ git checkout 06-constructor-activity-solution`
